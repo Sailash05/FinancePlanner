@@ -1,3 +1,4 @@
+import finexaiLogo from '../../../assets/logo/finexai-logo.png';
 
 const Footer = () => {
     return (
@@ -9,7 +10,15 @@ const Footer = () => {
     
     {/* About Section */}
     <div>
-      <h3 className="text-xl font-bold text-violet-500 mb-4">FinexAI</h3>
+      {/* <h3 className="text-xl font-bold text-violet-500 mb-4">FinexAI</h3> */}
+      <div className="flex items-center gap-2 cursor-pointer">
+  <img 
+    src={finexaiLogo} 
+    alt="FinexAI Logo" 
+    className="w-6 h-6 object-contain" 
+  />
+  <span className="text-xl font-bold text-violet-500">FinexAI</span>
+</div>
       <p className="text-gray-400 text-sm">
         AI-powered tools to optimize your finances, investments, and planning.
         Trusted by thousands of users worldwide.

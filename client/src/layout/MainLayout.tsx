@@ -9,7 +9,7 @@ export default function MainLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen w-screen bg-black text-white">
+    <div className="flex h-[100dvh] w-screen bg-black text-white">
       {/* Sidebar (responsive) */}
       <SideNavBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 

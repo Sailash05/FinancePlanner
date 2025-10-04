@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthService } from "../../service/auth.service"; // uncomment when backend ready
 import LoginLoader from "../../components/loadingComponent/authLoading/LoginLoader";
 import SignupErrorAlert from "../../components/authComponent/SignupErrorAlert";
+import finexaiLogo from '../../assets/logo/finexai-logo.png';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -61,9 +62,17 @@ const LoginPage = () => {
     <div className="min-h-screen bg-black text-white flex flex-col">
       {/* Header */}
       <header className="flex justify-between items-center px-8 py-4 border-b border-violet-800 bg-black/70 backdrop-blur-md z-20">
-        <Link to="/" className="text-2xl font-extrabold text-violet-400">
-          FinexAI
+
+<Link to={'/'} className="flex items-center gap-2 cursor-pointer">
+          <img 
+            src={finexaiLogo} 
+            alt="FinexAI Logo" 
+            className="w-8 h-8 object-contain" 
+          />
+          <span className="text-2xl font-bold text-violet-500">FinexAI</span>
         </Link>
+
+
         <Link
           to="/"
           className="text-sm px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded-lg transition"
