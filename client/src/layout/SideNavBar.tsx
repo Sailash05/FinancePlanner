@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { Home, Activity, PieChart, Lightbulb, MessageCircle, X } from "lucide-react";
 import { motion } from "framer-motion";
+import finexaiLogo from '../assets/logo/finexai-logo.png';
 
 interface SideNavBarProps {
   isOpen: boolean;
@@ -29,9 +30,18 @@ export default function SideNavBar({ isOpen, setIsOpen }: SideNavBarProps) {
       >
         <div className="flex items-center justify-between mb-10">
   {/* Brand */}
-  <h1 className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-violet-400 to-fuchsia-500">
+  {/* <h1 className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-violet-400 to-fuchsia-500">
     FinexAI
-  </h1>
+  </h1> */}
+
+  <div className="flex items-center gap-2 cursor-pointer">
+          <img 
+            src={finexaiLogo} 
+            alt="FinexAI Logo" 
+            className="w-8 h-8 object-contain" 
+          />
+          <span className="text-2xl font-bold text-violet-500">FinexAI</span>
+        </div>
 
   {/* Close Button */}
   <button
@@ -75,9 +85,14 @@ export default function SideNavBar({ isOpen, setIsOpen }: SideNavBarProps) {
         transition={{ type: "spring", stiffness: 130, damping: 25 }}
         className="hidden md:flex w-64 h-screen bg-black/95 backdrop-blur-lg border-r border-violet-800 shadow-2xl flex-col p-6"
       >
-        <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-violet-400 to-fuchsia-500 mb-12 animate-pulse">
-          FinexAI
-        </h1>
+          <div className="flex items-center gap-2 cursor-pointer mb-12 animate-pulse">
+          <img 
+            src={finexaiLogo} 
+            alt="FinexAI Logo" 
+            className="w-8 h-8 object-contain" 
+          />
+          <span className="text-2xl font-bold text-violet-500">FinexAI</span>
+        </div>
         <nav className="flex flex-col gap-3 relative">
           {navItems.map((item) => {
             const Icon = item.icon;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import finexaiLogo from '../../../assets/logo/finexai-logo.png'
 
 export default function TopNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,15 @@ export default function TopNavbar() {
   return (
     <nav className="w-full bg-black fixed top-0 left-0 z-50 border-b border-violet-700">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-violet-500 cursor-pointer">FinexAI</div>
+        
+        <div className="flex items-center gap-2 cursor-pointer animate-pulse">
+          <img 
+            src={finexaiLogo} 
+            alt="FinexAI Logo" 
+            className="w-8 h-8 object-contain" 
+          />
+          <span className="text-2xl font-bold text-violet-500">FinexAI</span>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-white font-medium">

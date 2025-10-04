@@ -1,6 +1,7 @@
 import { Bell, User, LogOut, Settings, Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import finexaiLogo from '../assets/logo/finexai-logo.png';
 
 interface HeaderProps {
   setLogoutPopup: (val: boolean) => void;
@@ -21,9 +22,17 @@ export default function Header({ setLogoutPopup, toggleSidebar }: HeaderProps) {
         >
           <Menu size={22} className="text-gray-200" />
         </button>
-        <h1 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">
+        {/* <h1 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">
           FinexAI
-        </h1>
+        </h1> */}
+        <div className="flex items-center gap-2 cursor-pointer">
+          <img 
+            src={finexaiLogo} 
+            alt="FinexAI Logo" 
+            className="w-8 h-8 object-contain" 
+          />
+          <span className="text-2xl font-bold text-violet-500">FinexAI</span>
+        </div>
       </div>
 
       {/* Center */}
